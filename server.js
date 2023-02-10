@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.set('strictQuery', false).connect('mongodb://mongo:TezBCYSRtkER9Zm2N32N@containers-us-west-171.railway.app:5467/todo', {
+mongoose.set('strictQuery', false).connect('mongodb://mongo:TezBCYSRtkER9Zm2N32N/todo', {
 	useNewUrlParser: true
 }).then(() => console.log('Connected to DB')).catch(console.error);
 
