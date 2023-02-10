@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.set('strictQuery', false).connect('mongodb://127.0.0.1:27017/todo', {
+mongoose.set('strictQuery', false).connect('mongodb+srv://danilkotlaev:1gcw9IxHlW6qnHvJ@mern.s8bqefv.mongodb.net/todo?retryWrites=true&w=majority', {
 	useNewUrlParser: true
 }).then(() => console.log('Connected to DB')).catch(console.error);
 
