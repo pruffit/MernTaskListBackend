@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
 
@@ -45,4 +46,4 @@ app.get('/todo/complete/:id', async (req, res) => {
 	res.json(todo);
 });
 
-app.listen(3001, () => console.log('Server started on port 3001'));
+app.listen(process.env.PORT || 3001, () => console.log('Server started!'));
