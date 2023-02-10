@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.set('strictQuery', false).connect('mongodb://mongo:TezBCYSRtkER9Zm2N32N/todo', {
+mongoose.set('strictQuery', false).connect(`mongodb://${{ MONGOUSER }}:${{ MONGOPASSWORD }}@${{ MONGOHOST }}:${{ MONGOPORT }}/todo`, {
 	useNewUrlParser: true
 }).then(() => console.log('Connected to DB')).catch(console.error);
 
@@ -45,4 +45,4 @@ app.get('/todo/complete/:id', async (req, res) => {
 	res.json(todo);
 });
 
-app.listen(`PORT`);
+app.listen(`0.0.0.0:$PORT`);
