@@ -2,6 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+const MONGOUSER = 'mongo';
+const MONGOPASSWORD = 'TezBCYSRtkER9Zm2N32N';
+const MONGOHOST = 'containers-us-west-171.railway.app';
+const MONGOPORT = '5467';
+
 const app = express();
 
 app.use(express.json());
