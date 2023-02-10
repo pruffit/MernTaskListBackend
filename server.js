@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.set('strictQuery', false).connect('mongodb://127.0.0.1:27017/todo', {
+mongoose.set('strictQuery', false).connect('mongodb://mongo:TezBCYSRtkER9Zm2N32N@containers-us-west-171.railway.app:5467/todo', {
 	useNewUrlParser: true
 }).then(() => console.log('Connected to DB')).catch(console.error);
 
@@ -45,4 +45,4 @@ app.get('/todo/complete/:id', async (req, res) => {
 	res.json(todo);
 });
 
-app.listen(3001, () => console.log('Server started on port 3001'));
+app.listen(`PORT`);
