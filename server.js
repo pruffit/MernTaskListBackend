@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.set('strictQuery', false).connect(`mongodb://${{ MONGOUSER }}:${{ MONGOPASSWORD }}@${{ MONGOHOST }}:${{ MONGOPORT }}/todo`, {
+mongoose.set('strictQuery', false).connect(`mongodb://${ MONGOUSER }:${ MONGOPASSWORD }@${ MONGOHOST }:${ MONGOPORT }/todo`, {
 	useNewUrlParser: true
 }).then(() => console.log('Connected to DB')).catch(console.error);
 
