@@ -50,4 +50,4 @@ app.get('/todo/complete/:id', async (req, res) => {
 	res.json(todo);
 });
 
-app.listen(`0.0.0.0:$PORT`);
+app.listen(`merntasklistbackend-production.up.railway.app`);
