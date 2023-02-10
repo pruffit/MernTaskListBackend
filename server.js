@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-
+//new conect
 mongoose.set('strictQuery', false).connect('mongodb+srv://danilkotlaev:1gcw9IxHlW6qnHvJ@mern.s8bqefv.mongodb.net/todo?retryWrites=true&w=majority', {
 	useNewUrlParser: true
 }).then(() => console.log('Connected to DB')).catch(console.error);
